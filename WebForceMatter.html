@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun with Science</title>
+    <link rel="stylesheet" href="stylesf.css">
+
+</head>
+<body>
+    <header>
+        <h1>Fun With Science</h1>
+        <p>Einstein has nothing on you; embrace your inner curiosity and become a genius!</p>
+    </header>
+
+    <section id="intro">
+        <h2> What are States of Matter?</h2>
+        <p>
+            <a href="https://phet.colorado.edu/sims/html/states-of-matter/latest/states-of-matter_all.html" target="_blank">
+                Explore States of Matter Simulation
+            </a>
+        </p>
+        <p> States of matter are forms in which matter exists.</p>
+        <button onclick="toggleInfo('more-info')"> Learn More </button>
+        <p id="more-info" style="display: none;">
+         The four states of matter observed in everyday life are solids, liquids, and gases.
+        </p>
+    </section>
+
+    <section id="states-of-matter">
+        <h2> States of Matter</h2>
+        <p>
+            <a href="https://youtu.be/9TVOlTolKFA" target="_blank">
+                States of Matter
+            </a>
+        </p>
+        <div class="matter-container">
+            <div class="matter">
+                <h3>Solid</h3>
+                <p> A solid is a state of matter with a defined shape and volume.</p>
+                <img src="Downloads/solid.gif" alt="solid" class="matter-img" onclick="enlargeImage(this)">
+            </div>
+            <div class="matter">
+                <h3> Liquid</h3>
+                <p> A liquid is a state of matter with a defined volume, but no defined shape.</p>
+                <img src="Downloads/liquid.gif" alt="liquid" class="matter-img" onclick="enlargeImage(this)">
+            </div>
+            <div class="matter">
+                <h3> Gas</h3>
+                <p> A gas is a state of matter lacking either a defined volume or defined shape.</p>
+                <img src="Downloads/gas.gif" alt="gas" class="matter-img" onclick="enlargeImage(this)">
+            </div>
+        </div>
+    </section>
+
+    <section id="intro-forces">
+        <h2>What is Force?</h2>
+        <p>
+            <a href="https://youtu.be/B6mi1-YoRT4" target="_blank">
+                Forces and Motion
+            </a>
+        </p>
+        <p>A force is a push or pull that can change the way something moves.</p>
+        <button onclick="toggleInfo('plus-info')">Show More</button>
+        <p id="plus-info" style="display: none;">
+            A force can make an object start moving, stop moving, or change direction!
+        </p>
+    </section>
+
+    <section id="types-of-forces">
+        <h2>Types of Forces</h2>
+        <p>
+            <a href="https://youtu.be/hkfH_EkhArI" target="_blank">
+                Types of Forces
+            </a>
+        </p>
+        <div class="force-container">
+            <div class="force">
+                <h3>Contact Force</h3>
+                <p>Contact forces represent the result of physical contact between two objects where one object exerts force on the other.</p>
+                <img src="Downloads/contactforce.gif" alt="Contact" class="force-img" onclick="enlargeImage(this)">
+            </div>
+            <div class="force">
+                <h3>Non-Contact Force</h3>
+                <p>Non-contact forces do not involve physical contact between two objects but act through the space between the two.</p>
+                <img src="Downloads/nocontactforce.gif" alt="Non-Contact" class="force-img" onclick="enlargeImage(this)">
+            </div>
+        </div>
+    </section>
+
+    <section id="examples-of-contact-forces">
+          <h2> Examples of Contact Forces</h2>
+          <p>
+               <a href ="https://youtu.be/nk35aGqJ-F8" target="_blank">
+                  Contact Forces
+               </a>
+          </p>
+          <div class="force-container">
+            <div class="force">
+                <h3> Friction</h3>
+                <p> Friction is a force that resists the sliding or rolling of one solid object over another. </p>
+                <img src="Downloads/frictiong.gif" alt="Friction" class="force-img" onclick="enlargeImage(this)">
+            </div>
+            <div class="force">
+                <h3> Tension</h3>
+                <p> Tension is a force transmitted through a rope, string, cable or similar object when pulled by forces acting from opposite sides.</p>
+                <img src="Downloads/tensiong.gif" alt="Tension" class="force-img" onclick="enlargeImage(this)">
+            </div>
+            <div class="force">
+                <h3> Spring Force</h3>
+                <p> Spring force is the restoring force exerted by a spring when it is either stretched or compressed from its equilibrium position.</p>
+                <img src="Downloads/springg.gif" alt="Spring" class="force-img" onclick="enlargeImage(this)">
+            </div>
+          </div>
+    </section>
+
+    <section id="examples-of-non-contact-forces">
+        <h2> Examples of Non-contact Forces</h2>
+        <p>
+            <a href="https://youtu.be/SybIX2nEn1E" target ="_blank">
+                Non-contact Forces
+            </a>
+        </p>
+        <div class="force-container">
+            <div class="force">
+                <h3> Gravity</h3>
+                <p> Gravity is the mutual attraction between all masses in the universe.</p>
+                <img src="Downloads/gravityg.gif" alt="Gravity" class="force-img" onclick="enlargeImage(this)">
+            </div>
+            <div class="force">
+                <h3> Electric Force</h3>
+                <p> Electric force is the repulsive or attractive interaction between any two charged bodies.</p>
+                <img src="Downloads/electricg.gif" alt="Electric" class="force-img" onclick="enlargeImage(this)">
+            </div>
+            <div class="force">
+                <h3> Magnetic Force</h3>
+                <p> Magnetic force is the attraction or repulsion between electrically charged particles due to their motion.</p>
+                <img src="Downloads/magnet.gif" alt="Magnetic" class="force-img" onclick="enlargeImage(this)">
+            </div>
+        </div>
+    </section>
+
+    <section id="motion">
+        <h2>What is Motion?</h2>
+        <p>
+            <a href="https://youtu.be/CKhbU8FZz9k" target ="_blank">
+                Motion
+            </a>
+        </p>
+        <p>Motion happens when an object moves from one place to another.</p>
+        <button onclick="animateBall()">Watch a Ball Move!</button>
+        <div id="animation">
+            <div id="ball"></div>
+        </div>
+    </section>
+
+    <section id="quiz">
+        <h2>Quick Quiz!</h2>
+        <p>Let's test your knowledge!</p>
+        <form id="quizForm">
+            <label for="forceQuestion">What force pulls objects toward Earth?</label><br>
+            <input type="radio" id="gravity" name="forceQuestion" value="gravity">
+            <label for="gravity">Gravity</label><br>
+            <input type="radio" id="friction" name="forceQuestion" value="friction">
+            <label for="friction">Friction</label><br>
+            <input type="radio" id="magnet" name="forceQuestion" value="magnet">
+            <label for="magnet">Magnetic Force</label><br><br>
+            <label for="matterQuestion">What state of matter is orange juice in?</label><br>
+            <input type="radio" id="solid" name="matterQuestion" value="solid">
+            <label for="solid">Solid</label><br>
+            <input type="radio" id="Liquid" name="matterQuestion" value="liquid">
+            <label for="liquid">Liquid</label><br>
+            <input type="radio" id="Gas" name="matterQuestion" value="gas">
+            <label for="gas">Gas</label><br><br>
+            <label for="forceQuestion2">What force allows for a vehicle to be pulled off the ground at a junkyard ?</label><br>
+            <input type="radio" id="Tension" name="forceQuestion2" value="tension">
+            <label for="tension">Tension</label><br>
+            <input type="radio" id="Magnet " name="forceQuestion2" value="magnet">
+            <label for="magnet">Magnetic Force</label><br>
+            <input type="radio" id="Gravity" name="forceQuestion2" value="gravity">
+            <label for="gravity">Gravity</label><br><br>
+            <label for="matterQuestion2">How are the particles arranged in a gas?</label><br>
+            <input type="radio" id="Close-together" name="matterQuestion2" value="close-together">
+            <label for="close-together">Close together</label><br>
+            <input type="radio" id="Random-way" name="matterQuestion2" value="random-way">
+            <label for="random-way">Random way</label><br>
+            <input type="radio" id="Widely-spaced" name="matterQuestion2" value="widely-spaced">
+            <label for="widely-spaced"> Widely Spaced</label><br><br>
+            <label for="forceQuestion3">What force is involved in the activity of bungee jumping?</label><br>
+            <input type="radio" id="Tension" name="forceQuestion3" value="tension">
+            <label for="tension">Tension</label><br>
+            <input type="radio" id="Friction " name="forceQuestion3" value="friction">
+            <label for="friction">Friction</label><br>
+            <input type="radio" id="Electric" name="forceQuestion3" value="electric-force">
+            <label for="gravity">Electric Force</label><br><br>
+            <label for="matterQuestion3">What state does water become when it is sprayed from a spray bottle?</label><br>
+            <input type="radio" id="Liquid" name="matterQuestion3" value="liquid">
+            <label for="liquid">Liquid</label><br>
+            <input type="radio" id="Solid" name="matterQuestion3" value="solid">
+            <label for="solid">Solid</label><br>
+            <input type="radio" id="Gas" name="matterQuestion3" value="gas">
+            <label for="gas"> Gas</label><br><br>
+            <label for="forceQuestion4">Which of the following forces is a contact force?</label><br>
+            <input type="radio" id="Gravity" name="forceQuestion4" value="gravity">
+            <label for="gravity">Gravity</label><br>
+            <input type="radio" id="Friction " name="forceQuestion4" value="friction">
+            <label for="friction">Friction</label><br>
+            <input type="radio" id="Electric" name="forceQuestion4" value="electric-force">
+            <label for="electric">Electric Force</label><br><br>
+            <button type="button" onclick="checkAnswer()">Submit</button>
+        </form>
+        <p id="quizResult"></p>
+    </section>
+
+    <footer>
+        <p>Created with love for young explorers! © 2025</p>    
+    </footer>
+
+    <script src="scriptf.js"></script>
+
+</body>
+</html>
+
