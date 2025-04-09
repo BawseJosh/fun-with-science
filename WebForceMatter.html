@@ -221,3 +221,237 @@
 </body>
 </html>
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f8ff;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #4CAF50;
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+button {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff5722;
+}
+
+button {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff5722;
+}
+   
+#intro, #states-of-matter, #intro-forces, #types-of-forces, #examples-of-contact-forces, #examples-of-non-contact-forces, #motion, #quiz {
+    margin-top: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.enlarged {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(2);
+}
+
+.matter-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.matter {
+    text-align: center;
+    width: 30%;
+}
+
+.matter img {
+    width: 300px;
+    height: 300px;
+}
+.force-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.force {
+    text-align: center;
+    width: 30%;
+}
+
+.force img {
+    width: 300px;
+    height: 300px;
+}
+
+#animation {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #e0f7fa;
+    margin-top: 20px;
+}
+
+#ball {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="radio"] {
+    margin: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1em;
+    color: #666;
+}
+
+function toggleInfo(elementId) {
+    var info = document.getElementById(elementId);
+    if (info.style.display === "none") {
+        info.style.display = "block";
+    } else {
+        info.style.display = "none";
+    }
+}
+
+ // Function to enlarge the image
+ function enlargeImage(img) {
+    // Toggle enlarged class
+    if (img.classList.contains('enlarged')) {
+        img.classList.remove('enlarged');
+    } else {
+        img.classList.add('enlarged');
+    }
+}
+// Animate a ball for the "Motion" section
+function animateBall() {
+    const ball = document.getElementById("ball");
+    ball.style.transition = "left 2s ease-out";
+    ball.style.left = "90%";
+    setTimeout(() => {
+        ball.style.left = "0";
+    }, 2000);
+}
+
+// Check the quiz answers for multiple questions
+function checkAnswer() {
+    const form = document.getElementById("quizForm");
+    const result = document.getElementById("quizResult");
+
+    // Array of questions with correct answers
+    const questions = [
+        {
+            name: "forceQuestion", // Name of the input group for this question
+            correctAnswer: "gravity",
+            feedback: "Correct! Gravity pulls objects toward Earth."
+        },
+        {
+            name: "matterQuestion",
+            correctAnswer: "liquid",
+            feedback: "Correct! Juice is a liquid."
+        },
+        {
+            name: "forceQuestion2",
+            correctAnswer: "magnet",
+            feedback: "Correct! Strong magnetic force attracts a vehicle towards its source."
+        },
+        {
+            name: "matterQuestion2",
+            correctAnswer: "widely-spaced",
+            feedback: "Correct! Particles in a gas are widely spaced."
+        },
+        {
+            name: "forceQuestion3",
+            correctAnswer: "tension",
+            feedback: "Correct! Tension is observed in the rope while bungee jumping."
+        },
+        {
+            name: "matterQuestion3",
+            correctAnswer: "gas",
+            feedback: "Correct! Water is in the form of a gas known as water vapour when sprayed."
+        },
+        {
+            name: "forceQuestion4",
+            correctAnswer: "friction",
+            feedback: "Correct! Friction is a force that uses contact."
+        }
+        // Add more questions here as needed
+    ];
+
+    let allCorrect = true;
+    let resultText = "";
+
+    // Loop through each question to check answers
+    for (let i = 0; i < questions.length; i++) {
+        const selectedAnswer = form.querySelector(`input[name="${questions[i].name}"]:checked`);
+
+        if (selectedAnswer) {
+            if (selectedAnswer.value === questions[i].correctAnswer) {
+                resultText += `Question ${i + 1}: ${questions[i].feedback}\n`;
+            } else {
+                resultText += `Question ${i + 1}: Oops! Try again.\n`;
+                allCorrect = false;
+            }
+        } else {
+            resultText += `Question ${i + 1}: Please select an answer.\n`;
+            allCorrect = false;
+        }
+    }
+
+    // Display the final result
+    result.innerText = resultText;
+
+    // Optionally, you can add additional logic if all answers are correct
+    if (allCorrect) {
+        result.innerText += "\nAll answers are correct!";
+    }
+}
+
